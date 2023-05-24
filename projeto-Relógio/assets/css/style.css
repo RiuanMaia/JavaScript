@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+}
+.relogio-area{
+    width: 500px;
+    height: 180px;
+    border-radius: 50px;
+    border: 5px solid 	#4682B4;
+    margin: 15% auto;
+    background-image: linear-gradient(to right, #004fff,#050429);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.hours, .minutes, .seconds {
+    background-color: #B0C4DE;
+    width: 120px;
+    height: 60%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: bold;
+    color:#4682B4;
+    font-family:'Times New Roman';
+}
+.doisPonto {
+    font-size: 80px;
+    color: #B0C4DE;
+    margin-bottom: 5px;
+}
+a {
+    width: 50px;
+    height: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    text-decoration: none;
+    color: #222;
+}

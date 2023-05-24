@@ -1,0 +1,173 @@
+@keyframes pisca{
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial;
+    background-color: #222;
+}
+.urna{
+    margin-top: 20px;
+    background-color: #dbd5c9;
+    padding: 30px;
+    display: flex;
+    border: 3px solid lightgray;
+    border-radius: 20px;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #222;
+    width: 550px;
+    height: 320px;
+    background: linear-gradient(to right, #E8E8E8,#C1C1C1);
+}
+.d-1{
+    flex: 1;
+    display: flex;
+}
+.d-1--info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+.d-1--1{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.d-1--2{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d-1--3{
+    height: 50px;
+    display:flex;
+}
+.numeros{
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    border: 1px solid #222;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    
+}
+.pisca{
+    animation: pisca 1s infinite linear;
+}
+.aviso--grande {
+    animation: pisca 1s infinite linear;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.d-1--4{
+    flex: 1;
+    line-height: 30px;
+}
+.d-1--right{
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.d-1--imagem{
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+.d-1--imagem img {
+    width: 100%;
+}
+.d-1--imagem.small{
+    width: 80%;
+    font-size: 12px;
+}
+
+.d-2{
+    height: 50px;
+    font-size: 14px;
+    border-top: 2px solid #222;
+    padding-left: 10px;
+}
+
+
+.keyboard{
+background-color: #403a3a;
+margin-left: 30px;
+
+}
+.teclado--linha {
+    display: flex;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    padding: 20px 40px;
+    border: 1px solid #C1C1C1;
+    color: #E8E8E8;
+    flex: 1;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.button:hover{
+    font-size: 31px;
+    color: #222;
+    padding: 21px 41px;
+    cursor: pointer;
+}
+.branco, .corrige, .confirma {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 40px 40px;
+    font-size: 30px;
+    color: #E8E8E8;
+    border: 1px solid #C1C1C1;
+}
+.branco:hover, .corrige:hover, .confirma:hover {
+    cursor: pointer;
+    padding: 41px 41px;
+}
+.branco{
+    background-color: #e8e8e8;
+    color:#403a3a;
+}
+.corrige{
+    background-color: #eead2d;
+}
+.confirma{
+    background-color: green;
+}
+
+.aviso--gigante{
+    font-size: 70px;
+    font-weight: bold;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}

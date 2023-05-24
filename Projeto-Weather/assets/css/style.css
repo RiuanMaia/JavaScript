@@ -1,0 +1,67 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+}
+.clima{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    border-radius: 15px;
+    width: 45vw;
+    height: 60vh;
+    background-image: url("../images/tempoNoite.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+.inputCidade{
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    padding: 5px;
+}
+.buttonPesquisar {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    right: 25px;
+}
+.infoClima{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+.nameCity{
+    letter-spacing: 1px;
+    margin: 20px 0px 0px 20px;
+    font-size: 40px;
+    font-family: 'DM Sans';
+    text-transform: uppercase;
+    /* margin: -62px 0px 0px 30px; */
+}
+.tempCidade{
+    display: flex;
+    align-items: center;
+    font-family: 'DM Sans';
+    
+    /* margin-left: 30px; */
+    margin: -15px 0px 0px 20px;
+    
+}
+.tempNumber{
+    font-size: 70px;
+}
+.lowC{
+    text-transform: uppercase;
+    font-size: 30px;
+    
+}
