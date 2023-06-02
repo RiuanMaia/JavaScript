@@ -1,0 +1,12 @@
+uma lista de pokémons, que se abre quando clicado
+um botão. o botão deve abrir este modal, tudo feito
+com o mais puro Css, HTML e js.
+
+No Js, teremos todas as informações dos atletas
+incluindo fotos. Neste modal teremos dois botões
+que vão trocar as informações dos atletas, percorrendo
+o array que os contém, também teremos um botão que 
+fecha o modal e se mantém no pokemón apresentado no
+momento.
+
+Não será nada extravagante.
