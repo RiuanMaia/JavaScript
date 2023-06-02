@@ -135,8 +135,10 @@ body {
     margin-top: -5px;
 }
 .pokeInfo p {
+    
     font-family: monospace;
-    text-align: justify;
+    font-size: 16px;
+    padding: 5px;
 }
 .pokeImg {
     flex: 2;
