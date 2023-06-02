@@ -120,6 +120,7 @@ body {
     border: 3px solid #000;
     display: flex;
     padding: 5px;
+    background-color: #222;
 }
 .pokeInfo {
     flex: 3;
