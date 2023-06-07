@@ -90,7 +90,7 @@ function starter(usuario: {nome: string, idade: number}){
 starter(user);
 
 //pode acontecer de ser enviado um usuário com dados incompletos, por exemplo faltando a variável idade, isso geraria um erro na execução, porem o typescript não acusa erro.
- */
+
 //propriedades opcionais 
 
 let user = {
@@ -107,3 +107,21 @@ function starter(usuario: {nome: string, idade?: number}){
 }
 starter(user);
 //no código acima, podemos ver que a simples implementação do "?" tornou o nosso parâmetro "idade" em um parâmetro não obrigatório.
+
+//union types 
+//um parâmetro ou variável com multiplos tipos
+//assume como number normalment
+let idade: string | number = 21;
+//idade pode ser string ou number
+idade = "25";
+ */
+//precisamos verificar o tipo na função caso seja utilizado algum method especifico para um tipo, como o exemplo a baixo;
+function mostrarIdade(idade: string | number){
+    if(typeof idade === "string"){
+        console.log(idade.toUpperCase());
+    }else {
+        console.log(idade)
+    }
+}
+mostrarIdade(21);
+mostrarIdade("21");
