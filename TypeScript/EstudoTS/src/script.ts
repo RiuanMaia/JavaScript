@@ -56,7 +56,7 @@ function somar(n1:number, n2:number): string {
     return n1 - n2;
  }
  let subtrai: number = subtrair(6,4);
- */
+
 //contextual typing em funções anônimas
 
 //o TS entende o contexto do código, o exemplo a seguir demonstra que o fato de nosso array ter apenas strings faz com que o type do array seja automaticamente string.
@@ -67,7 +67,7 @@ names.forEach(item => {
 
 //se o type do seu array for any, da para burlar isso fazendo uma verificação de typeof
 
-let coisas = ["Riuan", "Leudo", "Anderson", "Robson", 90];
+let coisas = ["Riuan", "Leudo", "Anderson", "Robson", 90]; 
 coisas.forEach(item => {
     if(typeof item === "string"){
         console.log(item.toUpperCase())
@@ -75,3 +75,18 @@ coisas.forEach(item => {
         console.log(item);
     }
 });
+ */
+//types em objetos
+//um dos typings mais utilizados
+
+let user = {
+    nome: "Riuan",
+    idade: 21,
+    treina: true
+};
+function starter(usuario: {nome: string, idade: number}){
+    return `oi ${usuario.nome} de ${usuario.idade} anos`;
+}
+starter(user);
+
+//pode acontecer de ser enviado um usuário com dados incompletos, por exemplo faltando a variável idade, isso geraria um erro na execução, porem o typescript não acusa erro.
