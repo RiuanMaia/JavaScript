@@ -36,7 +36,7 @@ function FirstLetterUpperCase(name: string){
    return `${firstLetter}${name.substring(1)}`; 
 }
 FirstLetterUpperCase("riuan");
-*/
+
 //usando types no retorno de uma função  
 function FirstLetterUpperCase(name: string): string{
     let  firstLetter = name.charAt(0).toUpperCase();
@@ -56,3 +56,22 @@ function somar(n1:number, n2:number): string {
     return n1 - n2;
  }
  let subtrai: number = subtrair(6,4);
+ */
+//contextual typing em funções anônimas
+
+//o TS entende o contexto do código, o exemplo a seguir demonstra que o fato de nosso array ter apenas strings faz com que o type do array seja automaticamente string.
+let names = ["Riuan", "Leudo", "Anderson", "Robson"];
+names.forEach(item => {
+    console.log(item.toUpperCase());
+});
+
+//se o type do seu array for any, da para burlar isso fazendo uma verificação de typeof
+
+let coisas = ["Riuan", "Leudo", "Anderson", "Robson", 90];
+coisas.forEach(item => {
+    if(typeof item === "string"){
+        console.log(item.toUpperCase())
+    }else {
+        console.log(item);
+    }
+});
