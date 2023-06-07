@@ -75,7 +75,7 @@ coisas.forEach(item => {
         console.log(item);
     }
 });
- */
+
 //types em objetos
 //um dos typings mais utilizados
 
@@ -90,3 +90,20 @@ function starter(usuario: {nome: string, idade: number}){
 starter(user);
 
 //pode acontecer de ser enviado um usuário com dados incompletos, por exemplo faltando a variável idade, isso geraria um erro na execução, porem o typescript não acusa erro.
+ */
+//propriedades opcionais 
+
+let user = {
+    nome: "Riuan",
+    idade: 21,
+    treina: true
+};
+function starter(usuario: {nome: string, idade?: number}){
+    if(usuario.idade !== undefined) {
+    return `oi ${usuario.nome} de ${usuario.idade} anos`;
+    }else{
+        return `oi ${usuario.nome}`;
+    }
+}
+starter(user);
+//no código acima, podemos ver que a simples implementação do "?" tornou o nosso parâmetro "idade" em um parâmetro não obrigatório.
