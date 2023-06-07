@@ -114,7 +114,7 @@ starter(user);
 let idade: string | number = 21;
 //idade pode ser string ou number
 idade = "25";
- */
+ 
 //precisamos verificar o tipo na função caso seja utilizado algum method especifico para um tipo, como o exemplo a baixo;
 function mostrarIdade(idade: string | number){
     if(typeof idade === "string"){
@@ -125,3 +125,46 @@ function mostrarIdade(idade: string | number){
 }
 mostrarIdade(21);
 mostrarIdade("21");
+
+//type e interface: como usar e diferenças
+
+type Idade = string | number;
+
+function mostrarIdade(idade: Idade){
+    if(typeof idade === "string"){
+        console.log(idade.toUpperCase());
+    }else {
+        console.log(idade)
+    }
+}
+mostrarIdade(21);
+mostrarIdade("21");
+
+type User = {
+    nome: string,
+    idade: number | string
+};
+function resumo(usuario: User) {
+    return `Olá, ${usuario.nome} você tem ${usuario.idade} anos.`
+};
+resumo({
+    nome: "Riuan",
+    idade: 21
+});
+*/
+//na maioria dos casos você vai poder escolher usar type ou interface, a principal diferença é: podemos "adicionar" informações ao interface no decorrer do código, já no type gera erro de duplicação.
+
+interface User {
+    nome: string,
+};
+interface User {
+    idade: string | number
+};
+
+function resumo(usuario: User) {
+    return `Olá, ${usuario.nome} você tem ${usuario.idade} anos.`
+};
+resumo({
+    nome: "Riuan",
+    idade: 21
+});
