@@ -263,7 +263,7 @@ const algo: QualquerFuncao = () => {
 //utilizamos o comando "tsc src/script.ts -w" para assim sincronizarmos o nosso .ts com o .js.
 //então não precisamos ficar inputando comandos no terminal a todo momento, isso é o watchMode em ação, como se fosse um live server utilizado no HTML;
 const nome: string = "Riuan";
-*/
+
 //criando o arquivo tsconfig.json:
 
 //utilizamos o comando tsc --init para criar nosso arquivo
@@ -280,8 +280,32 @@ const nome: string = "Riuan";
 //escolhendo quais arquivos compilar:
 
 //no final do arquivo tsconfig.json colocamos um "exclude": [
-    "**/*.dev.ts"
+    //"**.dev.ts"
     //arquivos dev.ts são arquivos meramente para desenvolvimento, ou seja não precisam ser compilados.
 //]
 //esse arquivo funciona para determinarmos quem compilar.
-//quando trabalhamos com projetos, esse
+//quando trabalhamos com projetos, quando mexemos com node, há uma pasta chamada nodeModules que acumula os arquivos typescript, e é extremamente pesada, podemos passar para o tsconfig para exclui-la, embora sem a inclusão do exclude ela já seja apagada.
+
+//também existe o include, já que naturalmente nosso tsconfig já analisa todo o projeto, o include serve para escolher a quantia e quais arquivos a serem analisados.
+
+//entendendo target.
+
+//trabalhando com Libs no TS
+//ao descomentar a lib do tsconfig a gente retirou o valor padrão dela, então temos que inputar nossas próprias libs, a utilizada foi: "DOM", que já é conhecida, então não precisa de explição. o padrão do lib é: "DOM", "ES6", "DOM.Iterable", "ScriptHost".
+
+const button = document.querySelector("button") as HTMLButtonElement;
+button.addEventListener("click", () =>{
+    console.log("Clicou!")
+})
+*/
+//rootDir e outDir
+
+//basicamente, na sessão module do nosso tsconfig encontramos esses dois, no outDir colocamos o caminho que queremos que nosso javaScript recem-nascido fique, e no rootDir é especificamos onde estão nossos arquivos .ts.
+
+//noComment, noEmit e noEmitOnError
+//o noEmitOnError tem de ser implementado no arquivo e caso esteja setado como true, na existência de algum erro ele não só não traduzira o arquivo com erro, mas sim todos os arquivos vão deixar de ser emitidos.
+
+//configurações para qualidade do código:
+//noUnusedLocals proibe a criação de uma variavel criada localmente e não está sendo usada localmente.
+//noUnusedParameters é o mesmo que o acima, é uma forma de melhorar a qualidade do seu código;
+//noImplicitReturns também é obvío.
