@@ -151,7 +151,7 @@ resumo({
     nome: "Riuan",
     idade: 21
 });
-*/
+
 //na maioria dos casos você vai poder escolher usar type ou interface, a principal diferença é: podemos "adicionar" informações ao interface no decorrer do código, já no type gera erro de duplicação.
 
 interface User {
@@ -168,3 +168,45 @@ resumo({
     nome: "Riuan",
     idade: 21
 });
+
+//type assertions
+let idade = document.getElementById("idade") as HTMLInputElement;
+//especificando que tipo de elemento é "idade"
+
+console.log( idade.value);
+
+//types literais 
+type Alinha = "left" | "right" | "center";
+type Nome = "Riuan" | "riuan";
+
+let nome: Nome = "Riuan";
+
+function mostraTexto(texto: string, alinhamento: Alinha ) {
+    //.............
+}
+mostraTexto(nome, "center");
+mostraTexto(nome, "right");
+*/
+//inferência literal
+//gerando um erro:
+//o código abaixo foi implementado para gerar um union type para ser utilizado em method resolvendo o erro já que agora method só aceita GET ou POST, e não só o parâmetro da função
+type Methods = "GET" | "POST";
+function fazerRequisicao(url: string, method: "GET" | "POST") {
+    //.............
+}
+//independente de se utilizar objetos ou variáveis separadas, o erro ocorre no mesmo lugar,o erro ocorre por conta da facilidade de mudanças que o atributo method pode sofrer, o código em si não está errado, no momento.
+let url: string =  "https://google.com.br";
+let method: Methods = "GET";
+fazerRequisicao(url,method);
+
+//se fossemos implementar com um objeto:
+type Requisicao = {
+    url: string,
+    method: "GET" | "POST"
+}
+let req: Requisicao = {
+    url: "https://google.com.br",
+     method: "GET"
+    };
+fazerRequisicao(req.url,req.method);
+//isso é protejer a informação dos dois lados.
